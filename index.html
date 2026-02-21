@@ -1,132 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carolina Design</title>
-
-<style>
-:root {
-    --marfil: #F5F2EE;
-    --negro: #111111;
-    --gris: #6E6A67;
-    --acento: #B26E63;
-    --fuente-serif: "Georgia", serif;
-    --fuente-sans: "Helvetica Neue", sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--marfil);
-    color: var(--negro);
-    font-family: var(--fuente-sans);
-    line-height: 1.6;
-}
-
-section {
-    padding: 120px 10%;
-}
-
-h1, h2 {
-    font-family: var(--fuente-serif);
-    font-weight: 500;
-}
-
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 900px;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: var(--gris);
-    max-width: 500px;
-    margin-bottom: 40px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border: 1px solid var(--negro);
-    text-decoration: none;
-    color: var(--negro);
-    transition: 0.3s ease;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-}
-
-.btn:hover {
-    background-color: var(--negro);
-    color: var(--marfil);
-}
-
-.about {
-    max-width: 700px;
-}
-
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.about p {
-    color: var(--gris);
-    font-size: 1rem;
-}
-
-.footer {
-    padding: 40px 10%;
-    font-size: 0.8rem;
-    color: var(--gris);
-}
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    section {
-        padding: 80px 8%;
-    }
-}
-</style>
-</head>
-
 <body>
 
 <section class="hero">
     <h1>CAROLINA DESIGN</h1>
-    <p>Diseño digital & redes sociales.  
-    Creo identidad visual para marcas que necesitan claridad, dirección y presencia real.</p>
-    <a href="#about" class="btn">Ver más</a>
+    <p>Diseño con carácter. Silencio que impone presencia.</p>
+    <a href="#servicios" class="btn">Ver más</a>
 </section>
 
-<section id="about" class="about">
-    <h2>Diseño con intención.</h2>
-    <p>
-    Carolina Design nace desde la convicción de que una marca no es solo estética.
-    Es posicionamiento, coherencia y dirección.
-    Cada proyecto es pensado estratégicamente para transmitir identidad con claridad y carácter.
-    </p>
+<section id="servicios" class="section">
+    <h2>Servicios</h2>
+    <p>Identidad visual · Logos · Branding · Diseño estratégico</p>
 </section>
 
-<div class="footer">
-    © 2026 Carolina Design. Todos los derechos reservados.
-</div>
+<section class="section frase">
+    <p>El silencio no es vacío. Es fuerza contenida.</p>
+</section>
+
+<section id="contacto" class="section contacto">
+    <h2>Contacto</h2>
+    <p>Trabajemos juntas.</p>
+    <p>Email: tucorreo@email.com</p>
+</section>
 
 </body>
-</html>

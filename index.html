@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carolina Design | Diseño Digital & Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- ESTILOS GENERALES (CSS) --- */
+        /* --- VARIABLES --- */
         :root {
-            --color-fondo: #1a1a1a;
-            --color-texto: #f0f0f0;
-            --color-acento: #ff6b6b; /* Un color coral moderno */
-            --color-secundario: #333;
-            --fuente-principal: 'Helvetica Neue', sans-serif;
+            --color-fondo: #f5f5f5;
+            --color-texto: #111;
+            --color-acento: #6c5ce7;
+            --color-secundario: #e0e0e0;
+            --fuente-principal: 'Poppins', sans-serif;
         }
 
         * {
@@ -36,17 +37,17 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 5%;
-            background-color: rgba(26, 26, 26, 0.95);
+            background-color: rgba(245,245,245,0.95);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.6rem;
+            font-weight: 700;
             color: var(--color-acento);
         }
 
@@ -65,7 +66,7 @@
             cursor: pointer;
         }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO --- */
         .hero {
             height: 100vh;
             display: flex;
@@ -74,23 +75,24 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            background: radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 100%);
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .hero span {
-            color: var(--color-acento);
+            color: #ffeaa7;
         }
 
         .hero p {
             font-size: 1.2rem;
-            color: #aaa;
-            margin-bottom: 30px;
             max-width: 600px;
+            margin-bottom: 30px;
         }
 
         .btn {
@@ -98,8 +100,9 @@
             background-color: var(--color-acento);
             color: white;
             border-radius: 30px;
-            font-weight: bold;
+            font-weight: 600;
             border: 2px solid var(--color-acento);
+            transition: 0.3s;
         }
 
         .btn:hover {
@@ -107,7 +110,7 @@
             color: var(--color-acento);
         }
 
-        /* --- SERVICIOS --- */
+        /* --- SECCIONES --- */
         .section {
             padding: 80px 10%;
         }
@@ -116,8 +119,10 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
+            color: var(--color-acento);
         }
 
+        /* --- SERVICIOS --- */
         .servicios-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -129,11 +134,12 @@
             padding: 30px;
             border-radius: 15px;
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
         .card h3 {
@@ -150,33 +156,23 @@
 
         .proyecto {
             height: 250px;
-            background-color: #333;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #555;
-            font-weight: bold;
+            border-radius: 15px;
             overflow: hidden;
             position: relative;
-        }
-        
-        /* Placeholder visual para proyectos */
-        .proyecto::before {
-            content: 'Imagen del Proyecto';
-            z-index: 1;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .proyecto img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.6;
-            transition: 0.3s;
+            transition: transform 0.5s, opacity 0.3s;
         }
 
         .proyecto:hover img {
-            opacity: 0.3;
+            transform: scale(1.05);
+            opacity: 0.8;
         }
 
         /* --- CONTACTO --- */
@@ -195,8 +191,8 @@
             padding: 15px;
             margin-bottom: 15px;
             background-color: var(--color-fondo);
-            border: 1px solid #444;
-            color: white;
+            border: 1px solid #ccc;
+            color: var(--color-texto);
             border-radius: 5px;
         }
 
@@ -205,13 +201,18 @@
             border-color: var(--color-acento);
         }
 
+        button {
+            width: 100%;
+            cursor: pointer;
+        }
+
         /* --- FOOTER --- */
         footer {
             text-align: center;
             padding: 20px;
-            background-color: black;
+            background-color: #111;
             font-size: 0.9rem;
-            color: #777;
+            color: #aaa;
         }
 
         /* --- RESPONSIVE --- */
@@ -237,7 +238,7 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
         }
     </style>
@@ -256,10 +257,10 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="inicio" class="hero">
         <h1>Diseño Digital & Web <br><span>Creatividad sin límites</span></h1>
-        <p>Transformo ideas en experiencias visuales memorables. Diseño páginas web modernas y marcas que destacan.</p>
+        <p>Transformo ideas en experiencias visuales memorables. Desarrollo marcas y sitios web modernos que realmente conectan con tu audiencia.</p>
         <a href="#contacto" class="btn">Empezar Proyecto</a>
     </section>
 
@@ -269,15 +270,15 @@
         <div class="servicios-grid">
             <div class="card">
                 <h3>🌐 Diseño Web</h3>
-                <p>Sitios web responsivos, rápidos y con un diseño único adaptado a tu marca (Webflow, WordPress, HTML/CSS).</p>
+                <p>Creo sitios web personalizados, responsivos y modernos, desarrollados con HTML, CSS y JavaScript, totalmente adaptados a tu marca.</p>
             </div>
             <div class="card">
                 <h3>🎨 Identidad de Marca</h3>
-                <p>Logotipos, paletas de colores y tipografías que cuentan la historia de tu emprendimiento.</p>
+                <p>Diseño logotipos, paletas de colores y tipografías que reflejan la esencia de tu proyecto y lo hacen memorable.</p>
             </div>
             <div class="card">
                 <h3>📱 Redes Sociales</h3>
-                <p>Plantillas para Instagram, posts y banners publicitarios para captar la atención de tu audiencia.</p>
+                <p>Plantillas, banners y publicaciones visuales que captan la atención y transmiten el mensaje de tu marca con estilo.</p>
             </div>
         </div>
     </section>
@@ -286,15 +287,14 @@
     <section id="portafolio" class="section">
         <h2 class="section-title">Trabajos Recientes</h2>
         <div class="portafolio-grid">
-            <!-- Aquí puedes poner imágenes reales. Ahora son placeholders grises -->
             <div class="proyecto">
-                <img src="https://via.placeholder.com/400x300/333/fff?text=Proyecto+1" alt="Proyecto 1">
+                <img src="https://via.placeholder.com/400x300/6c5ce7/fff?text=Proyecto+1" alt="Proyecto 1">
             </div>
             <div class="proyecto">
-                <img src="https://via.placeholder.com/400x300/444/fff?text=Proyecto+2" alt="Proyecto 2">
+                <img src="https://via.placeholder.com/400x300/a29bfe/fff?text=Proyecto+2" alt="Proyecto 2">
             </div>
             <div class="proyecto">
-                <img src="https://via.placeholder.com/400x300/555/fff?text=Proyecto+3" alt="Proyecto 3">
+                <img src="https://via.placeholder.com/400x300/ffeaa7/333?text=Proyecto+3" alt="Proyecto 3">
             </div>
         </div>
     </section>
@@ -302,27 +302,26 @@
     <!-- Contacto -->
     <section id="contacto" class="section contacto">
         <h2 class="section-title">Hablemos</h2>
-        <p style="margin-bottom: 30px; color: #aaa;">¿Tienes un proyecto en mente? Escríbeme y cotizamos sin compromiso.</p>
+        <p style="margin-bottom: 30px; color: #555;">¿Tienes un proyecto en mente? Escríbeme y cotizamos sin compromiso.</p>
         
         <div class="form-box">
-            <!-- NOTA: Para que funcione el correo, puedes usar un servicio como Formspree -->
             <form action="https://formspree.io/f/tu-email-aqui" method="POST">
                 <input type="text" name="nombre" placeholder="Tu Nombre" required>
                 <input type="email" name="email" placeholder="Tu Correo" required>
                 <textarea name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
-                <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">Enviar Mensaje</button>
+                <button type="submit" class="btn">Enviar Mensaje</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Carolina Design. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Carolina Design. Todos los derechos reservados.</p>
         <p style="margin-top: 10px;">Sígueme en Instagram | LinkedIn</p>
     </footer>
 
     <script>
-        // Script para el menú móvil
+        // Menú móvil
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
@@ -340,3 +339,7 @@
     </script>
 </body>
 </html>
+
+Si quieres, puedo hacer una segunda versión aún más “atrevida”: fondo oscuro, animaciones en hero y tarjetas flotantes, para que se vea más tech y moderno, estilo portafolio de diseñadora digital actual.
+
+¿Quieres que haga esa versión también?
